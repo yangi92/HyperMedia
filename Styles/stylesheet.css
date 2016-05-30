@@ -107,17 +107,22 @@ padding:0;
     width:45%;
     background-color: lightgray;
     box-shadow: 3px 4px 5px -4px rgba(64,64,64,1); 
+    vertical-align: top;
 }
 
 .newElementBox p{
     text-align: center;
     font-size: 22px;
-    
+    margin-top: -20%;
+}
+
+.newElementBox img{
+    margin-top: -2%;
 }
 
 .dividerBar{
     display:block;
-    margin-top:3%;
+    margin-top:2%;
     width:93.5%;
     margin-left:3%;
     height: 1px;
