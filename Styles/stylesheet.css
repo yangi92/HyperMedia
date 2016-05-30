@@ -92,6 +92,7 @@ padding:0;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
+
 .underlineFromCenter:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
@@ -101,11 +102,17 @@ padding:0;
 .newElementBox{
     display:inline-block;
     margin-left:3%;
-    margin-top: 3%;
+    margin-top: 5%;
     height: 45%;
     width:45%;
     background-color: lightgray;
     box-shadow: 3px 4px 5px -4px rgba(64,64,64,1); 
+}
+
+.newElementBox p{
+    text-align: center;
+    font-size: 22px;
+    
 }
 
 .dividerBar{
@@ -115,6 +122,11 @@ padding:0;
     margin-left:3%;
     height: 1px;
     background-color: dimgray;
+
+}
+
+.socialMediaIcons{
+    text-align: center;
 }
 
 .socialMediaIcons ul{
