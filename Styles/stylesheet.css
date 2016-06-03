@@ -8,6 +8,7 @@ body {
 background-color:whitesmoke;
 margin:0;
 padding:0;
+overflow:hidden;
 
 }
 
@@ -37,6 +38,25 @@ padding:0;
     box-shadow: 3px 4px 5px -4px rgba(64,64,64,1);    
 }
 
+.sideMenu{ /*   DA RIVEDERE!!!
+    display:block;
+    margin-left:-18%;
+    margin-right:0;
+    width:20%;
+    background-color:gainsboro;
+    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1); 
+    text-align: center; */
+} 
+
+.sideMenu ul{
+    list-style-type: none;  
+    
+}
+
+.sideMenu a{
+    font-size: 20px;
+    
+}
 
 .navigationBar{
     width:100%;
