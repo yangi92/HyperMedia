@@ -1,5 +1,5 @@
 
-html,body,.centralBox {
+html,body,.centralBox ,.centralBox-withMenu{
     min-height: 100%;
     height: 100%;
 }
@@ -8,59 +8,35 @@ body {
 background-color:whitesmoke;
 margin:0;
 padding:0;
-overflow:hidden;
-
+overflow: hidden;
 }
 
 .upperBox{  
+    position:relative;
     width:100%;
-    margin-top:-16px;
-    height:180px;
+    height:20%;
     background-color:#e5273c;
     display:block;
     box-shadow: -1px 3px 7px -3px rgba(64,64,64,1);
     text-align: center;
-    padding-top: 15px;
 }
 
 .upperBox a img{
-    margin-top:1%;
-}
-
-
-.centralBox{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width:960px;
-    margin-top:-3.4%;
-    background-color:gainsboro;
-    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1);    
-}
-
-.sideMenu{ /*   DA RIVEDERE!!!
-    display:block;
-    margin-left:-18%;
-    margin-right:0;
-    width:20%;
-    background-color:gainsboro;
-    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1); 
-    text-align: center; */
-} 
-
-.sideMenu ul{
-    list-style-type: none;  
-    
-}
-
-.sideMenu a{
-    font-size: 20px;
-    
+    height: 50%;
+    margin-top: 1%;
 }
 
 .navigationBar{
-    width:100%;
-    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1);    
+    position:absolute;
+    bottom:0;
+    left:12.5%;
+    width:75%;
+    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1); 
+    margin-right: auto;
+    margin-left: auto;
+    background-color:darkgray;
+
+    
 }
 
 .navigationBar ul {
@@ -68,13 +44,12 @@ overflow:hidden;
     margin:0;
     padding:0;
     overflow: hidden;
-    background-color:darkgray;
     text-align: center;
     
 }
 
 .navigationBar li {
-    float:left; 
+    float: left;
 }
 
 .navigationBar li:nth-child(6){
@@ -89,6 +64,84 @@ overflow:hidden;
     text-decoration: none;
     font-size: 17px;
 }
+
+.navigationBar .table{
+    display:table;
+    margin:0 auto;
+}
+
+.centralBox{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:75%;
+    background-color:gainsboro;
+    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1);    
+}
+
+
+.centralBox-withMenu{
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    width:75%;
+    background-color:gainsboro;
+    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1);    
+}
+
+
+.sideMenu{
+    display:inline-block;
+    min-height:100%;
+    height: 100%;
+    vertical-align:top;
+    margin-left:0;
+    width:12.15%;
+    background-color: gainsboro;
+    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1);
+    text-align: center;
+    
+}
+
+.sideMenu ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+.sideMenu li:first-child{
+    border-bottom: 2px solid #bbb;
+}
+
+.sideMenu li{
+   border-bottom: 1px solid #bbb;  
+}
+
+.sideMenu ul li img{
+    height:20px;
+    padding-right: 10px;
+
+}
+
+
+.sideMenu ul li a{
+    display: block;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+}
+.sideMenu ul li a:hover {
+    background-color: #e5273c;
+    color:white;
+}
+
+
+
+
 .underlineFromCenter {
   display: inline-block;
   vertical-align: middle;
@@ -128,21 +181,28 @@ overflow:hidden;
     display:inline-block;
     margin-left:3%;
     margin-top: 5%;
-    height: 45%;
+    height:50%;
     width:45%;
     background-color: lightgray;
     box-shadow: 3px 4px 5px -4px rgba(64,64,64,1); 
     vertical-align: top;
+    text-align: center;
 }
+
 
 .newElementBox p{
-    text-align: center;
-    font-size: 22px;
-    margin-top: -20%;
+    font-size: 22px;  
 }
 
-.newElementBox img{
-    margin-top: -2%;
+.newPhone{
+    display:inline-block;
+    max-height: 100%;
+}
+
+.fetchImg{
+    display: inline;
+    max-height:100%;
+    height:auto;
 }
 
 .dividerBar{
@@ -154,6 +214,7 @@ overflow:hidden;
     background-color: dimgray;
 
 }
+
 
 .socialMediaIcons{
     text-align: center;
