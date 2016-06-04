@@ -52,7 +52,7 @@ overflow: hidden;
     float: left;
 }
 
-.navigationBar li:nth-child(6){
+.navigationBar li:nth-child(5){
     border-left: 1px solid #bbb;
 
 }
@@ -76,7 +76,7 @@ overflow: hidden;
     margin-right:auto;
     width:75%;
     background-color:gainsboro;
-    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1);    
+    box-shadow: 3px 4px 5px -4px rgba(64,64,64,1); 
 }
 
 
@@ -176,47 +176,71 @@ overflow: hidden;
   right: 0;
 }
 
+.newElementBoxHeader{
+    display:inline-block;
+    margin-left:3%;
+    width:45%;
+    text-align: center;
+   
+       
+}
+
+.newElementBoxHeader p{
+    bottom:0;
+    color:white;
+    font-size: 1.4em;
+    background-color: #e5273c;
+    margin-bottom: 0;
+}
+
 
 .newElementBox{
     display:inline-block;
+    margin:0;
     margin-left:3%;
-    margin-top: 5%;
     height:50%;
     width:45%;
     background-color: lightgray;
     box-shadow: 3px 4px 5px -4px rgba(64,64,64,1); 
     vertical-align: top;
     text-align: center;
+    position: relative;
 }
 
-
-.newElementBox p{
-    font-size: 22px;  
+.newElementBox .dividerBarVer{
+    position: absolute;
+    top:0;
+    left:50%;
+    bottom:0;
+    border-left: 1px solid #bbb;
 }
 
-.newPhone{
+.newPhones{
     display:inline-block;
-    max-height: 100%;
+    margin-left:0;
+    margin-top: 5%;
+    height:85%;
+    width:45%;
+    text-align: center;
 }
 
-.fetchImg{
-    display: inline;
-    max-height:100%;
-    height:auto;
+.newPhones img{
+    width:60%;
 }
 
-.dividerBar{
+
+
+.dividerBarHor{
     display:block;
     margin-top:2%;
     width:93.5%;
     margin-left:3%;
     height: 1px;
     background-color: dimgray;
-
 }
 
 
-.socialMediaIcons{
+.socialMediaIcons{ /* allineare al fondo pagina???*/
     text-align: center;
 }
 

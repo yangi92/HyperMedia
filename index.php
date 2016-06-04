@@ -30,62 +30,95 @@
          </div>
      </div>
      <div class="centralBox"> 
-         
+        <div class="newElementBoxHeader"><p>Check out our new arrivals</p></div>
+        <div class="newElementBoxHeader"><p>Check out our new offers</p></div>
+
+        <div class="newElementBox">
+              <div class="dividerBarVer"></div>          
+             
+             <?php
+                 $servername = "localhost";
+                 $username = "projectim";
+                 $password = "";
+                 $dbname = "my_projectim";
+
+                 $conn = new mysqli($servername, $username, $password, $dbname);
+                 if ($conn->connect_error) {
+                     die("Connection failed: " . $conn->connect_error);
+                 }
+
+                 $sql = "SELECT * FROM NuoviArrivi";
+                 $result = $conn->query($sql);
+                 if ($result->num_rows > 0) {
+                     $phones = array();
+                     while($row = mysqli_fetch_array($result,MYSQL_ASSOC)){
+                      $phones[]=$row;
+                    
+                    }
+                    
+                 } else {
+                     echo "0 results";  
+                 }
+                for($i=0;$i<2;++$i){  
+                    echo '<div class="newPhones">';
+                    $img = $phones[$i]['ImageName'];
+                    echo '<img src="Images/' . $img . '">';
+                    echo "<br>";
+                    echo '<p>' .$phones[$i]['Marca'] .' '.$phones[$i]['Nome'] .'</p>';
+                    echo '<p><b>Price: ' . $phones[$i]['Prezzo_nuovo'] . ' € </b></p>';
+                    echo '</div>';
+                 }
+                
+             
+             
+                 $conn->close();
+                ?> 
+              
+        </div>
          <div class="newElementBox">
-            <p>Check out our latest entries</p>
-                 
+            <div class="dividerBarVer"></div>          
+
               <?php
                  $servername = "localhost";
                  $username = "projectim";
                  $password = "";
                  $dbname = "my_projectim";
 
-                     $conn = new mysqli($servername, $username, $password, $dbname);
+                 $conn = new mysqli($servername, $username, $password, $dbname);
                  if ($conn->connect_error) {
                      die("Connection failed: " . $conn->connect_error);
                  }
 
-                 $sql = "SELECT ImagePath FROM NuoviArrivi WHERE Nome ='iPhone 6s'";
+                 $sql = "SELECT * FROM Offerte";
                  $result = $conn->query($sql);
-
                  if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc())
-                         $path = $row["ImagePath"];
-
+                     $phones = array();
+                     while($row = mysqli_fetch_array($result,MYSQL_ASSOC)){
+                      $phones[]=$row;
+                    
+                    }
                     
                  } else {
-                     echo "0 results";
+                     echo "0 results";  
                  }
-                 $sql = "SELECT ImagePath FROM NuoviArrivi WHERE Nome ='Galaxy S7'";
-                 $result = $conn->query($sql);
-
-                 if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc())
-                         $path2 = $row["ImagePath"];
-
+                for($i=0;$i<2;++$i){  
+                    echo '<div class="newPhones">';
+                    $img = $phones[$i]['ImageName'];
+                    echo '<img src="Images/' . $img . '">';
+                    echo "<br>";
+                    echo '<p>' .$phones[$i]['Marca'] .' '.$phones[$i]['Nome'] .'</p>';
+                    echo '<p><b>Price: ' . $phones[$i]['Prezzo_new'] . ' € </b></p>';
+                    echo '<p><b><del>Price: ' . $phones[$i]['Prezzo_old'] . ' € </del></b></p>';
                     
-                 } else {
-                     echo "0 results";
+                    echo '</div>';
                  }
+                
+             
+             
                  $conn->close();
                 ?> 
-             
-             
-             <div class="newPhone">
-                 <img class="fetchImg" src="<?php echo $path; ?>">
-             </div>
-             <div class="newPhone">
-                 <img class="fetchImg" src="<?php echo $path2; ?>" >
-             </div>
-                 
-           
-             
-           
          </div>
-         <div class="newElementBox">
-             <p>Check out our new offers</p>
-         </div>
-         <div class="dividerBar">
+         <div class="dividerBarHor">
          </div>
          <div class="socialMediaIcons">
              <ul>
