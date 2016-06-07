@@ -1,12 +1,8 @@
-
-// When we click on the LI
-$("li").click(function(){
-  // If this isn't already active
-  if (!$(this).hasClass("active")) {
-    // Remove the class from anything that is active
-    $("li.active").removeClass("active");
-    // And make this active
-    $(this).addClass("active");
-  }
+$(function() {
+   $("li").click(function() {
+      // remove classes from all
+      $("li").removeClass("active");
+      // add class to the one we clicked
+      $(this).addClass("active");
+   });
 });
-
