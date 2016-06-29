@@ -49,7 +49,7 @@ $(function(){
 $(document).ready(function(){
             $.ajax({
                 type : "POST",
-                url : 'ModemFetch.php',
+                url : 'http://projectim.altervista.org/ModemFetch.php',
                 dataType : 'html',
                 success: function(response) {
                     $('.grid').html(response);

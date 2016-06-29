@@ -1,7 +1,7 @@
      $(document).ready(function(){
             $.ajax({
                 type : "POST",
-                url : 'DeviceOutletFetch.php',
+                url : 'http://projectim.altervista.org/DeviceOutletFetch.php',
                 dataType : 'html',
                 success: function(response) {
                     $('.grid').html(response);

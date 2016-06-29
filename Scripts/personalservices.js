@@ -1,7 +1,7 @@
 $(document).ready(function(){
             $.ajax({
                 type : "POST",
-                url : 'personalservicesFetch.php',
+                url : 'http://projectim.altervista.org/personalservicesFetch.php',
                 dataType : 'html',
                 success: function(response) {
                     $('.grid').html(response);

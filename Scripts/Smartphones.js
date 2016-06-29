@@ -1,7 +1,7 @@
 $(document).ready(function(){
             $.ajax({
                 type : "POST",
-                url : 'SmartPhonesFetch.php',
+                url : 'http://projectim.altervista.org/SmartPhonesFetch.php',
                 dataType : 'html',
                 success: function(response) {
                     $('.grid').html(response);

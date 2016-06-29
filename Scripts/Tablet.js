@@ -45,7 +45,7 @@ $(function(){
      $(document).ready(function(){
             $.ajax({
                 type : "POST",
-                url : 'tabletFetch.php',
+                url : 'http://projectim.altervista.org/tabletFetch.php',
                 dataType : 'html',
                 success: function(response) {
                     $('.grid').html(response);
