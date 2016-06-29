@@ -589,3 +589,11 @@ line-height: 50px;
     height:250px;
 }
 
+.forSL{
+    margin-top:6%;
+    text-align:center;
+}
+
+.forSL ul{
+    list-style-type: none;
+}

@@ -168,8 +168,10 @@ echo '<div id="myCarousel" class="carousel slide" data-ride="carousel">
       echo '<div class="col-sm-6">';     
        echo '<div class="btnWrap">   
         <div class="btn-group-vertical">
-       
-         <button type="button" class="btn btn-primary">Available Smartlife </button>
+        <form action="deviceforsmartlife.html" method="get">
+        <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
+        <button class="btn btn-primary">Available Smartlife Service</button>
+        </form>
         <button type="button" class="btn btn-primary">Available Assistance</button>
         <button onclick="goBack()" type="button" class="btn btn-primary">Back to device</button>
         </div>
