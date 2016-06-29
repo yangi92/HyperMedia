@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta name="viewport" content="initial-scale=1">
+    <meta charset="utf-8">
+    <title>TIM-Smartlife &#38; Entertainment</title>
+    <link rel="icon" href="img/favicon.ico"/>     
+  
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="Styles/stylesheet.css">
+     <script src="Scripts/DeviceSL.js"></script> 
+
+    </head>
+    
+ 
+ <body> 
+    <div class="upperBox">
+       <a href="index.html"><img src="Images/TimLogo.png" alt="TimLogo"></a>
+    </div> 
+             
+    <div class="navigationBar">
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                 </button>
+                </div>
+    
+               <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active underlineFromCenter"><a href="devices.html">DEVICES <span class="sr-only">(current)</span></a></li>
+                    <li class="underlineFromCenter"><a href="smartlife.html">SMARTLIFE</a></li>
+                    <li class="underlineFromCenter"><a href="assistance.html">ASSISTANCE</a></li>
+                    <li class="underlineFromCenter"><a href="highlights">HIGHLIGHTS</a></li>
+                    <li class="underlineFromCenter"><a href="TheGroup_TimGroup.html">THE GROUP</a></li>
+                    <li class="underlineFromCenter"><a href="whoweare.html">WHO WE ARE</a></li>
+                    <li class="underlineFromCenter"><a href="shoppingCart">SHOPPING CART</a></li>
+                </ul>
+            </div>
+            </div>
+        </nav> 
+    </div>
+     <nav class="navbar navbar-default sidebar"  style="z-index:100;" role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>      
+    <p class="navbar-brand" style="font-size:0.9em;">Device Categories</p>
+    </div>
+        
+    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="Smartphones.html">Smartphone and devices<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>        
+        <li  ><a href="Tablet.html">Tablet and computers<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+        <li ><a href="Modem.html">Modem and Networking<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+        <li class="active"><a href="DeviceSL.html">Smartlife and Entertainment<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+        <li ><a href="DeviceOutlet.html">Outlet<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+ <div class="centralBox">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="devices.html">Devices</a></li>
+            <li class="active">SmartLife &#38; Entertainment</li>
+         </ol>
+     
+     <!-- FILTER -->
+     
+     <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" >
+                Filter <span class="glyphicon glyphicon-tasks"></span></a>
+                </h4>
+            </div>
+        <div id="collapse1" class="panel-collapse collapse">
+            <div class="container-fluid ">
+                <div class="row">
+                    <!-- ShowAll -->
+                    <div class="col-sm-3 filterRow">
+                        <h4>Show All</h4>
+                            <div id="all" class="filter-button" >All</div>
+                    </div>
+                
+                    <!-- Price -->
+                    <div class="col-sm-3 filterRow">
+                        <h4>Price</h4>
+                  
+                        <div id="pr" class="filter-button" ><p class="from">0</p>-<p class="to">20</p>€</div>
+                        <div id="pr" class="filter-button" ><p class="from">20</p>-<p class="to">70</p>€</div>
+                        <div id="pr" class="filter-button" ><p class="from">70</p>-<p class="to">150</p>€</div>
+                        <div id="pr" class="filter-button" ><p class="from">150</p>+€</div>
+                        
+                    </div>
+            
+                    <!-- Mobile -->
+                    <div class="col-sm-3 filterRow">
+                        <h4>3G/4G</h4>
+                     
+                        <div id="mob" class="filter-button" ><p class="from">Yes</p></div>
+                        <div id="mob" class="filter-button" ><p class="from">No</p></div>
+                      
+                        
+                    </div>
+            
+                    <!-- Category -->
+                    <div class="col-sm-3 filterRow">
+                        <h4>Category</h4>
+                     
+                        <div id="cat" class="filter-button" ><p class="from">Home</p></div>
+                        <div id="cat" class="filter-button" ><p class="from">Outdoor</p></div>
+                    </div>
+                </div>
+            </div>      
+        </div>
+     </div>
+     </div>
+     
+     <div id="parent" class="grid">
+     </div>
+     
+ </div>
+     
+     <div class="socialMediaIcons">
+             <ul>
+                <li><a href="https://www.facebook.com/TimOfficialPage/?fref=ts"><img src="Images/FACEBOOKICON.png" alt="Facebook" height="40px"></a></li>
+                <li><a href="https://twitter.com/tim_official"><img src="Images/TWITTERICON.png" alt="Twitter" height="40px"></a></li>
+                <li><a href="https://plus.google.com/+TIM/posts"><img src="Images/GOOGLEICON.png" alt="Facebook" height="40px"></a></li>
+             </ul>
+            </div>
+     
+     
+     
+ </body>
+</html> 

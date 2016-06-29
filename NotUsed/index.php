@@ -31,13 +31,13 @@
     
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active underlineFromCenter"><a href="devices.html">DEVICES <span class="sr-only">(current)</span></a></li>
-                    <li class="underlineFromCenter"><a href="smartlife.html">SMARTLIFE</a></li>
-                    <li class="underlineFromCenter"><a href="assistance.html">ASSISTANCE</a></li>
-                    <li class="underlineFromCenter"><a href="highlights">HIGHLIGHTS</a></li>
+                    <li class="underlineFromCenter"><a href="devices.html">DEVICES <span class="sr-only">(current)</span></a></li>
+                    <li class="underlineFromCenter"><a href="#">SMARTLIFE</a></li>
+                    <li class="underlineFromCenter"><a href="#">ASSISTANCE</a></li>
+                    <li class="underlineFromCenter"><a href="#">HIGHLIGHTS</a></li>
                     <li class="underlineFromCenter"><a href="TheGroup_TimGroup.html">THE GROUP</a></li>
-                    <li class="underlineFromCenter"><a href="whoweare.html">WHO WE ARE</a></li>
-                    <li class="underlineFromCenter"><a href="shoppingCart">SHOPPING CART</a></li>
+                    <li class="underlineFromCenter"><a href="#">WHO WE ARE</a></li>
+                    <li class="underlineFromCenter"><a href="#">SHOPPING CART</a></li>
                 </ul>
             </div>
             </div>
@@ -45,36 +45,14 @@
     </div>
     
      <div class="centralBox">
-        <ol class="breadcrumb">
-            <li><a href="index.html">Home</a>
-            </li>
-            <li class="active">Devices</li>
-         </ol>
     
-    <div class="container-fluid ">
-        <div class="row">
-            <div class="col-sm-4 thumbnail" style="border-bottom:none;border-right:1px solid #bbb" >
-                <a href="Smartphones.html"><img src="Images/phones.png" alt="Smartphones and Phones"><p>SMARTPHONE &#38; PHONES</p></a>
-            </div>
-              <div class="col-sm-4 thumbnail" style="border-bottom:none;border-right:1px solid #bbb" >
-                <a href="Tablet.html"><img src="Images/table.png" alt="Tablet and computers"><p>TABLET &#38; COMPUTERS</p></a>
-            </div>
-              <div class="col-sm-4 thumbnail" style="border-bottom:none;" >
-                <a href="Modem.html"><img src="Images/networking.png" alt="Modem and networking"><p>MODEM &#38; NETWORKING</p></a>
-            </div>
-        </div>
-         <div class="row">
-             <div class="col-sm-6 thumbnail" style="border-bottom:none;border-right:1px solid #bbb" >
-                <a href="DeviceSL.html"><img src="Images/smartwatch.png" alt="Smartlife and entertainment"><p>SMARTLIFE &#38; ENTERTAINMENT</p></a>
-            </div>
-              <div class="col-sm-6 thumbnail" style="border-bottom:none;" >
-                <a href="DeviceOutlet.html"><img src="Images/sale.png" alt="outlet"><p>OUTLET</p></a>
-            </div>
-             
-        </div>
+        
+ 
+    <div class="container-fluid">
         
     </div>
    </div>
+     
    <div class="socialMediaIcons">
              <ul>
                 <li><a href="https://www.facebook.com/TimOfficialPage/?fref=ts"><img src="Images/FACEBOOKICON.png" alt="Facebook" height="40px"></a></li>

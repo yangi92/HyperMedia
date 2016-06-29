@@ -5,4 +5,4 @@ $(function() {
       // add class to the one we clicked
       $(this).addClass("active");
    });
-});
+}); 
