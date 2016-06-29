@@ -148,13 +148,19 @@
     echo '<div class=col-sm-4 style="margin-top:2%;">';
     echo '<div class="btnWrap">   
         <div class="btn-group-vertical">
-        <form action="deviceTechnical.html" method="get">
+       
+       <form action="deviceTechnical.html" method="get">
         <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
         <input type="hidden" name="next" value="'.$next.'" />
         <input type="hidden" name="prev" value="'.$prev.'" />
-        <button class="btn btn-primary">Technical specifications</button>
+        <button class="btn btn-primary">Technical Informations</button>
         </form>
-         <button type="button" class="btn btn-primary">Available Smartlife </button>
+        
+         <form action="deviceforsmartlife.html" method="get">
+        <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
+        <button class="btn btn-primary">Available Smartlife Service</button>
+        </form>
+         
         <button type="button" class="btn btn-primary">Available Assistance</button>
         </div>
         </div>';

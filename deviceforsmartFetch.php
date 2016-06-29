@@ -4,7 +4,7 @@
     }
     include("connection.php");
     /* Getting the device data */
-    $sql ="SELECT *  FROM DeviceSmartlife WHERE Device ='".$name."'";
+    $sql ="SELECT *  FROM DeviceSmartlife WHERE Device ='".$name."' ORDER BY TypeOfSl ASC" ;
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $phone= array();
@@ -18,7 +18,7 @@
 
     echo '<div class="row">';
     echo '<div class="col-sm-2"></div>';
-    echo '<div class="col-sm-8 forSL"><h4>Available smartlife services</h4></div>';
+    echo '<div class="col-sm-8 forSL"><h4>Available Smartlife : '.$name.'</h4></div>';
     echo '<div class="col-sm-2"></div>';
     echo '</div>';
     echo '<div class="container-fluid">';
@@ -48,8 +48,14 @@
      echo '<div>'; 
      echo '<p>'.$sl[0]['Nome'] .'</p>';
      echo '</div>';
-     echo '</div>';  
-         
+    
+    /* View button */
+        
+         echo '<form action="'.$phone[$i]['Template'].'" method="get">';
+         echo '<input type="hidden" name="product" value="'.$sl[0]['Nome'].'" />'; 
+         echo '<button style="color:red;">View</button>';
+         echo '</form>';
+    echo '</div>';
     }
     echo '</div>';
     echo '</div>';  
