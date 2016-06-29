@@ -2,7 +2,7 @@
      $(document).ready(function(){
             $.ajax({
                 type : "POST",
-                url : 'indexFetch.php',
+                url : 'http://projectim.altervista.org/indexFetch.php',
                 dataType : 'html',
                 success: function(response) {
                     $('.centralBox').html(response);
