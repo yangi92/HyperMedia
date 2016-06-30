@@ -11,12 +11,11 @@
     $conn->close();
     
     echo '<div class="row">
-          <h3 class="gamesHeader"><b>Tim Games</b></h3>
-
+          <h3 class="gamesHeader" style="text-align:center;"><b>Tim Games</b></h3>
           <div class=col-sm-8 style="margin-top:5%;">
           
           <div style="padding-left:15px";>
-          <p style="">'.$games[0]['Descrizione'] .'</p>
+          <p style="">'.$games[0]['Descrizione'] .'<br></br>Cost:  <del>'.$games[0]['Prezzo'].'€</del>  1.00€</p>
           </div>
           
           </div>

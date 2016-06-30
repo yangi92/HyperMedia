@@ -140,21 +140,31 @@
        
     echo '<div class=col-sm-4 style="margin-top:2%;">';
     echo '<div class="btnWrap">   
-        <div class="btn-group-vertical">
-       
-       <form action="deviceTechnical.html" method="get">
-        <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
-        <input type="hidden" name="next" value="'.$next.'" />
-        <input type="hidden" name="prev" value="'.$prev.'" />
-        <button class="btn btn-primary">Technical Informations</button>
-        </form>
+        <div class="btn-group-vertical  " role="group">
         
-         <form action="deviceforsmartlife.html" method="get">
-        <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
-        <button class="btn btn-primary">Available Smartlife Service</button>
-        </form>
+        <div class="input-group" role="group">
+            <form action="deviceTechnical.html" method="get">
+            <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
+            <input type="hidden" name="next" value="'.$next.'" />
+            <input type="hidden" name="prev" value="'.$prev.'" />
+            <button class="btn btn-primary">Technical Informations</button>
+            </form>
+        </div>
+        
+        <div class="input-group" role="group">
+            <form action="deviceforsmartlife.html" method="get">
+            <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
+            <button class="btn btn-primary">Available Smartlife Service</button>
+            </form>
+        </div>
          
-        <button type="button" class="btn btn-primary">Available Assistance</button>
+        <div class="input-group" role="group">
+            <form action="#" method="get">
+            <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
+            <button class="btn btn-primary">Available Assistance Service</button>
+            </form>
+        </div>
+        
         </div>
         </div>';
      echo'</div>';
@@ -162,7 +172,7 @@
     echo '<div class="col-sm-2"></div>';
      
     echo '<div class="col-sm-6">';
-    echo '<div class="wrapper">';
+    echo '<div class="btnWrap">';
     if($prev!=null){
         echo '<div class="indexWrapper" style="text-align:center;">';
         echo '<p>Previous</p>';

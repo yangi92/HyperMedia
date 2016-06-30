@@ -599,7 +599,7 @@ line-height: 50px;
     list-style-type: none;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 960px) {
     .centralBox {
         padding: 0;
     }
