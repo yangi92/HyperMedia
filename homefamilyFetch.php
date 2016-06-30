@@ -17,7 +17,7 @@
                  $conn->close();
                  echo '<div class="container-fluid">';
 	             echo '<div class="row">';
-		         echo '<h2 style="text-align:center;margin-bottom:25px;">Health & Wellness</h2>';
+		         echo '<h2 style="text-align:center;margin-bottom:25px;">Home & Family</h2>';
                  for($i=0;$i<count($services);++$i){
                    echo '<div class="col-sm-6">';
                    /* nome + image*/

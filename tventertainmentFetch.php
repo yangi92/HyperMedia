@@ -30,12 +30,12 @@
                      if($i!=1){
                      echo '<form action="productTemplate.html" method="get">';
                      echo '<input type="hidden" name="product" value="'.$services[$i]['Nome'].'" />'; 
-                     echo '<button class="btn" style="text-align:center;">View</button>';
+                     echo '<button class="btn" style="text-align:center;border: 1px solid red;">View</button>';
                      echo'</form>';
                     }
                      else{
                      echo '<form action="timGames.html" method="get">';
-                     echo '<button class="btn" style="text-align:center;">View</button>';
+                     echo '<button class="btn" style="text-align:center;border: 1px solid red;">View</button>';
                      echo'</form>';
                      }
                      echo '</div>';

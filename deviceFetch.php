@@ -113,14 +113,7 @@
      $img = $phone[0]['ImageName'];
      echo '<img src="Images/' . $img . '">';
      echo '</div>';
-     echo '<div class="colorBox thumbnail selected"><img src="Images/' .$colors[0]['Colore1'].'" alt="color1"></div>';
-     if($colors[0]['Colore2']!=null){
-        echo '<div class="colorBox thumbnail"><img src="Images/' .$colors[0]['Colore2'].'"alt="color1"></div>';
-        
-      }
-      if($colors[0]['Colore3']!= null){
-         echo '<div class="colorBox thumbnail"><img src="Images/' .$colors[0]['Colore3'].'"alt="color1"></div>';
-      }
+    
      echo '</div>';
      echo '</div>';
      echo '<div class="col-sm-2" style="margin-top:2%;"></div>';
@@ -180,9 +173,8 @@
         echo '<input type="hidden" name="next" value="'.$phone[0]['Nome'].'" />'; 
         echo '<input type="hidden" name="phone" value="'.$prev.'" />';
         echo '<input type="hidden" name="prev" value="'.$all[$newPrev]['Nome'].'"/>';
-        echo '<button style="color:red;">View</button>';
+        echo '<button class="btn" style="text-align:center;border: 1px solid red;">View</button>';        
         echo'</form>';
-    
         echo '</div>';
      }
      if($next!=null){
@@ -190,12 +182,18 @@
         echo '<p>Next</p>';
         echo '<div class="colorBox thumbnail"><img src="Images/'.$nextPhone[0]['ImageName'].'"></div>';
         echo '<p>'.$nextPhone[0]['Nome'].'</p>';
+        if($newNext<4){
         echo '<form action="deviceTemplate.html" method="get">';
         echo '<input type="hidden" name="prev" value="'.$phone[0]['Nome'].'" />'; 
         echo '<input type="hidden" name="phone" value="'.$next.'" />';
         echo '<input type="hidden" name="next" value="'.$all[$newNext]['Nome'].'" />';
-        echo '<button>View</button>';
+        echo '<button class="btn" style="text-align:center;border: 1px solid red;">View</button>';
         echo'</form>';
+        }
+        else{
+         echo '<button class="btn" style="text-align:center;">View</button>';
+        }
+
          echo '</div>';
      }
      echo '</div>';

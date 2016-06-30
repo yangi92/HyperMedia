@@ -46,7 +46,12 @@
                             echo '</div>';
                             echo '<p>' .$new[$i]['Marca'] .' '.$new[$i]['Nome'] .'</p>';
                             echo '<p><b> '. $new[$i]['Prezzo_nuovo'] . ' € </b></p>';
-                            echo '<a class="view-button" href="index.html">View</a>';
+                              
+                            echo '<form action="deviceTemplate.html" method="get">';
+                            echo '<input type="hidden" name="phone" value="'.$new[$i]['Nome'].'" />'; 
+                            echo '<button class="btn" style="text-align:center;border: 1px solid red;">View</button>';
+                            echo'</form>';
+                            
                             echo '</div>';   
                             }
                         echo '</div>';
@@ -63,7 +68,7 @@
                             echo '</div>';
                             echo '<p>' .$offers[$i]['Marca'] .' '.$offers[$i]['Nome'] .'</p>';
                             echo '<p><b>Price: <del>' .$offers[$i]['Prezzo'] . ' € </del>' . $offers[$i]['Prezzo_new'] . ' € </b></p>';
-                            echo '<a class="view-button" href="index.html">View</a>';
+                            echo '<button class="btn" style="text-align:center;">View</button>';
                             echo '</div>';   
                             }
                         echo '</div>';
