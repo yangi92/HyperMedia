@@ -4,12 +4,10 @@
                 }
       if(isset($_POST['db'])) {
                 $db = $_POST['db'];
-                } 
-  
-   
+                }
     session_start();
     $sid= session_id();
-   
+
     include('connection.php');
 
     if ($conn->connect_error) {
@@ -67,9 +65,28 @@ $conn->close();
         }    
         $conn->close();
         
-        echo '<div class="thumbnail">
-                <img src="Images/'.$res[0]['ImageName'].'">
-                </div>';
+         echo '<div class="col-sm-3 device">';
+                    
+                        /* Piazzamento imagine */
+                    
+                        echo '<div class="thumbnail" style="height:170px;">'; 
+                        $img = $res[0]['ImageName'];
+                        echo '<img src="Images/' . $img . '">';
+                        echo '</div>';
+                    
+                        /* Mostra Nome e Marca */
+                    
+                        echo '<div class="inlineDisplay" style="text-align:center";>'; 
+                        echo '<p class="marca"><p>'.$res[0]['Nome'] .'</p>';
+                        echo '</div>';
+                    
+                        /* Mostra Prezzo */
+                        echo '<div class="inlineDisplay" style="text-align:center";>'; 
+                        echo '<p>Price: <p class="price">' . $res[0]['Prezzo'] . '</p>€</p>';
+                        echo '</div>';
+                        
+            
+                     echo '</div>';          
         }
     }
 ?>
