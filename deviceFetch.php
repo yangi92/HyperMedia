@@ -128,6 +128,11 @@
      echo '<li>'.$phone[0]['Feature3'].'</li>';
      echo '<li><h3 style="text-decoration:underline;">Price :'.$phone[0]['Prezzo'].' €</h3></li>';
      echo '</ul>';
+     echo'  <form action="shoppingCart.html" method="get">
+            <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
+            <input type="hidden" name="db" value="Smartphone_phones" />
+            <button class="btn btn-primary">Buy</button>
+            </form>';
      echo '</div>';
      echo '</div>';
 

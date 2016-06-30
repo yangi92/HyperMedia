@@ -9,7 +9,7 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
      <link rel="stylesheet" type="text/css" href="Styles/stylesheet.css">
-    <script src="Scripts/shoppingCart.js"></script>
+     <!-- <script src="Scripts/shoppingCart.js"></script>-->
  </head>
     
  
@@ -45,6 +45,38 @@
     </div>
     
      <div class="centralBox">
+         <script>
+         
+            var getUrlParameter = function getUrlParameter(sParam) {
+                 var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                 sURLVariables = sPageURL.split('&'),sParameterName,i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+                };
+             var test= getUrlParameter('phone');
+            
+    $(document).ready(function(){ 
+        
+     $.ajax({
+                
+                type : "POST",
+                url : 'http://projectim.altervista.org/buyAction.php',
+                data : { phone: getUrlParameter('phone'), 
+                         db: getUrlParameter('db'), 
+                       },
+                dataType : 'html',
+                success: function(response) {
+                    $('.centralBox').html(response);
+                }
+            }); 
+     });
+         </script>
  
    </div>
    <div class="socialMediaIcons">
