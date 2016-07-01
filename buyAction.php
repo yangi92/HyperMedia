@@ -112,4 +112,27 @@ $conn->close();
               <h3><u>Total: '.$total.'€</u></h3>
               </div>
               </div>';
+    echo '<div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="btnWrap">
+                    <a href="#" class="btn highlights" role="button"style="border:none";>Payment</a>         
+                </div>
+             </div>
+             <div class="col-sm-4"></div>
+           </div>';
+     echo '<div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="btnWrap">
+                    <a href="index.html" class="btn highlights" role="button">Home</a>         
+                </div>
+             </div>
+             <div class="col-sm-4"></div>
+           </div>';
+
+    
+
+        
+
 ?>
