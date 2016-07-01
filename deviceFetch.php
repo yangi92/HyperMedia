@@ -14,6 +14,7 @@
                /* Getting the device data */
                 
                 echo '<script src="Scripts/colorBox.js"></script>';
+                echo '<script src="Scripts/goBack.js"></script>';
                 include("connection.php");
                 
                 $sql5 = "SELECT * FROM Smartphone_phones";
@@ -106,9 +107,10 @@
        }
      }
      echo '<div class="row">';
+     echo '<div class=col-sm-1 style="margin-top:2%;"></div>';
      echo '<div class=col-sm-4 style="margin-top:2%;">';
      echo '<h3 style="text-align:center;">'.$phone[0]['Marca'].' '.$phone[0]['Nome'].'</h3>'; 
-     echo '<div class="elementBox" style="margin-left:5%;">';
+     echo '<div class="elementBox">';
      echo '<div id="mainImage" class="thumbnail" style="height:220px; border:none;">'; 
      $img = $phone[0]['ImageName'];
      echo '<img src="Images/' . $img . '">';
@@ -116,7 +118,7 @@
     
      echo '</div>';
      echo '</div>';
-     echo '<div class="col-sm-2" style="margin-top:2%;"></div>';
+     echo '<div class="col-sm-1" style="margin-top:2%;"></div>';
 
      echo '<div class="col-sm-6" style="margin-top:2%;">';
      echo '<h3 style="text-align:center;">Details</h3   >'; 
@@ -128,11 +130,7 @@
      echo '<li>'.$phone[0]['Feature3'].'</li>';
      echo '<li><h3 style="text-decoration:underline;">Price :'.$phone[0]['Prezzo'].' €</h3></li>';
      echo '</ul>';
-     echo'  <form action="shoppingCart.html" method="get">
-            <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
-            <input type="hidden" name="db" value="Smartphone_phones" />
-            <button class="btn btn-primary">Buy</button>
-            </form>';
+  
      echo '</div>';
      echo '</div>';
 
@@ -142,45 +140,42 @@
  
 
     echo '<div class="row">';
-       
+    echo '<div class=col-sm-1 style="margin-top:2%;"></div>';
     echo '<div class=col-sm-4 style="margin-top:2%;">';
     echo '<div class="btnWrap">   
-        <div class="btn-group-vertical  " role="group">
         
-        <div class="input-group" role="group">
+            <form action="shoppingCart.html" method="get">
+            <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
+            <input type="hidden" name="db" value="Smartphone_phones" />
+            <button class="btn btn-primary highlights">Buy</button>
+            </form>
+        
             <form action="deviceTechnical.html" method="get">
             <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
             <input type="hidden" name="next" value="'.$next.'" />
             <input type="hidden" name="prev" value="'.$prev.'" />
-            <button class="btn btn-primary">Technical Informations</button>
+            <button class="btn btn-primary highlights">Technical Informations</button>
             </form>
-        </div>
         
-        <div class="input-group" role="group">
             <form action="deviceforsmartlife.html" method="get">
             <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
-            <button class="btn btn-primary">Available Smartlife Service</button>
+            <button class="btn btn-primary highlights">Available Smartlife Service</button>
             </form>
-        </div>
          
-        <div class="input-group" role="group">
             <form action="#" method="get">
             <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
-            <button class="btn btn-primary">Available Assistance Service</button>
+            <button class="btn btn-primary highlights">Available Assistance Service</button>
             </form>
         </div>
-        
-        </div>
+       
         </div>';
-     echo'</div>';
      
-    echo '<div class="col-sm-2"></div>';
+    echo '<div class="col-sm-1"></div>';
      
-    echo '<div class="col-sm-6">';
+    echo '<div class="col-sm-6" style="margin-top:2%";>';
     echo '<div class="btnWrap">';
     if($prev!=null){
         echo '<div class="indexWrapper" style="text-align:center;">';
-        echo '<p>Previous</p>';
         echo '<div class="colorBox thumbnail"><img src="Images/'.$prevPhone[0]['ImageName'].'"></div>';
         echo '<p>'.$prevPhone[0]['Nome'].'</p>';
      
@@ -188,13 +183,12 @@
         echo '<input type="hidden" name="next" value="'.$phone[0]['Nome'].'" />'; 
         echo '<input type="hidden" name="phone" value="'.$prev.'" />';
         echo '<input type="hidden" name="prev" value="'.$all[$newPrev]['Nome'].'"/>';
-        echo '<button class="btn" style="text-align:center;border: 1px solid red;">View</button>';        
+        echo '<button class="btn" style="text-align:center;border: 1px solid red;"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;</button>';
         echo'</form>';
         echo '</div>';
      }
      if($next!=null){
         echo '<div class="indexWrapper" style="text-align:center;">';
-        echo '<p>Next</p>';
         echo '<div class="colorBox thumbnail"><img src="Images/'.$nextPhone[0]['ImageName'].'"></div>';
         echo '<p>'.$nextPhone[0]['Nome'].'</p>';
         if($newNext<4){
@@ -202,11 +196,11 @@
         echo '<input type="hidden" name="prev" value="'.$phone[0]['Nome'].'" />'; 
         echo '<input type="hidden" name="phone" value="'.$next.'" />';
         echo '<input type="hidden" name="next" value="'.$all[$newNext]['Nome'].'" />';
-        echo '<button class="btn" style="text-align:center;border: 1px solid red;">View</button>';
+        echo '<button class="btn" style="text-align:center;border: 1px solid red;"><span class="glyphicon glyphicon-chevron-right"></span>&nbsp;</button>';
         echo'</form>';
         }
         else{
-         echo '<button class="btn" style="text-align:center;">View</button>';
+        echo '<button class="btn" style="text-align:center;"><span class="glyphicon glyphicon-chevron-right"></span>&nbsp;</button>';
         }
 
          echo '</div>';

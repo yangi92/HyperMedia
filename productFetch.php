@@ -19,9 +19,9 @@
     $sql2 = "SELECT * FROM TvEntertainment WHERE Nome ='".$name."'";
     $result = $conn->query($sql2);
     if ($result->num_rows > 0) {
-        $phone= array();
+        $device= array();
         while($row = mysqli_fetch_array($result,MYSQL_ASSOC)){
-            $phone[]=$row;
+            $device[]=$row;
         }
     }else{
         echo "0 results";  
@@ -30,10 +30,10 @@
      
     echo '<div class="row">';
      echo '<div class=col-sm-4 style="margin-top:2%;">';
-        echo '<h3 style="text-align:center;">'.$phone[0]['Marca'].' '.$phone[0]['Nome'].'</h3>'; 
+        echo '<h3 style="text-align:center;">'.$device[0]['Marca'].' '.$device[0]['Nome'].'</h3>'; 
         echo '<div class="elementBox" style="margin-left:5%;">';
             echo '<div id="mainImage" class="thumbnail" style="height:220px; border:none;">'; 
-            $img = $phone[0]['ImageName'];
+            $img = $device[0]['ImageName'];
             echo '<img src="Images/' . $img . '">';
             echo '</div>';
         echo '</div>';
@@ -41,13 +41,13 @@
      echo '<div class="col-sm-8" style="margin-top:2%;">';
         echo '<h3 style="text-align:center;">Details</h3   >'; 
         echo '<div class="details">';
-            echo '<p style="margin-left:5%;font-size:16px;">'.$phone[0]['Descrizione'].'</p>';
+            echo '<p style="margin-left:5%;font-size:16px;">'.$device[0]['Descrizione'].'</p>';
             echo '<ul>';
-                echo '<li>'.$phone[0]['PrezzoSoluzione1'].'</li>';
-                echo '<li>'.$phone[0]['PrezzoSoluzione2'].'</li>';
-                echo '<li>'.$phone[0]['PrezzoSoluzione3'].'</li>';
-                if($phone[0]['PrezzoSoluzione4']!=null){
-                echo '<li>'.$phone[0]['PrezzoSoluzione4'].'</li>';
+                echo '<li>'.$device[0]['PrezzoSoluzione1'].'</li>';
+                echo '<li>'.$device[0]['PrezzoSoluzione2'].'</li>';
+                echo '<li>'.$device[0]['PrezzoSoluzione3'].'</li>';
+                if($device[0]['PrezzoSoluzione4']!=null){
+                echo '<li>'.$device[0]['PrezzoSoluzione4'].'</li>';
                 }
           echo '</ul>';
             echo '</div>';
@@ -71,19 +71,24 @@
      echo '<div class="col-sm-8" style="margin-top:2%;">';
 
      echo'<div class="form-group" style="text-align:center;">
+          
           <label for="sel1">Price List:</label>
           <select class="form-control" id="sel1">
-          <option>'.$phone[0]['PrezzoSoluzione1'].'</option>
-          <option>'.$phone[0]['PrezzoSoluzione2'].'</option>
-          <option>'.$phone[0]['PrezzoSoluzione3'].'</option>';
-          if($phone[0]['PrezzoSoluzione4']!=null){
-     echo '<option>'.$phone[0]['PrezzoSoluzione4'].'</option>';
+          <option>'.$device[0]['PrezzoSoluzione1'].'</option>';
+            if($device[0]['PrezzoSoluzione4']!=null){
+            echo '<option>'.$device[0]['PrezzoSoluzione4'].'</option>';
+          }          if($device[0]['PrezzoSoluzione3']!=null){
+            echo '<option>'.$device[0]['PrezzoSoluzione3'].'</option>';
+          }
+          if($device[0]['PrezzoSoluzione4']!=null){
+            echo '<option>'.$device[0]['PrezzoSoluzione4'].'</option>';
           }
      echo '</select>';
-     echo '</div>';
-     echo '<div class="btnWrap">';
-     echo '<button class="btn href="#">Buy now</button>';
-     echo '</div>';
+     echo '</div>
+      <div class="btnWrap">
+    
+      <button class="btn btn-primary">Buy</button>
+      </div>';
      echo '</div>';
      
 

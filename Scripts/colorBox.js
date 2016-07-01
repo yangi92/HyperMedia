@@ -4,8 +4,3 @@ $('.colorBox').on('click', function(){
     $(this).addClass('selected');
 });
 });
-
-function goBack() {
-    window.history.back();
-}
-

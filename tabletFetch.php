@@ -47,13 +47,12 @@
                          echo '<div class="camera" style="display:none;">' . $tablet[$i]['Pixel'] . '</div>'; 
                         
                         
-                        /*View Button*/
-                        /*
-                        echo '<form action="deviceTemplate.html" method="get">';
-                        echo '<input type="hidden" name="phone" value="'.$tablet[$i]['Nome'].'" />';
+                       
+                        echo '<form action="" method="get">';
+                        echo '<input type="hidden" name="" value="" />';
                         echo '<button>View</button>';
                          echo'</form>';
-                         */
+                   
                         echo '</div>';  
                     }
         echo '</div>';

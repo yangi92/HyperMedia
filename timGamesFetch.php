@@ -22,7 +22,10 @@
          
           <div class=col-sm-4  style="margin-top:5%;">
            <div class="btnWrap">
-           <button class="btn">Compatible devices</button>
+          <form action="smartlifefordevice.html" method="get">
+         <input type="hidden" name="product" value="'.$games[0]['Nome'].'" /> 
+         <button class="btn highlights" style="max-width:200px;width:100%;">Compatible devices</button>
+         </form>
           </div>
           </div>
           

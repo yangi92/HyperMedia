@@ -14,6 +14,7 @@
                /* Getting the device data */
                 
                 echo '<script src="Scripts/colorBox.js"></script>';
+                echo '<script src="Scripts/goBack.js"></script>';
                 include("connection.php");
                 
                 $sql5 = "SELECT * FROM Smartphone_phones";
@@ -166,23 +167,26 @@ echo '<div id="myCarousel" class="carousel slide" data-ride="carousel">
      echo '<div class="row">';
 
       echo '<div class="col-sm-6">';     
-       echo '<div class="btnWrap">   
+       
+        echo '<div class="btnWrap">   
         <div class="btn-group-vertical">
+       
         <form action="deviceforsmartlife.html" method="get">
         <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
-        <button class="btn btn-primary">Available Smartlife Service</button>
+        <button class="btn highlights">Available Smartlife Service</button>
         </form>
-        <button type="button" class="btn btn-primary">Available Assistance</button>
-        <button onclick="goBack()" type="button" class="btn btn-primary">Back to device</button>
+        
+        <button type="button" class="btn highlights">Available Assistance</button>
+        <button onclick="goBack()" type="button" class="btn highlights">Back to device</button>
         </div>
         </div>';
-     echo '</div>';
+
+    echo '</div>';
     echo '<div class="col-sm-6">';
 
      echo '<div class="btnWrap">';     
-     if($prev!=null){
+    if($prev!=null){
         echo '<div class="indexWrapper" style="text-align:center;">';
-        echo '<p>Previous</p>';
         echo '<div class="colorBox thumbnail"><img src="Images/'.$prevPhone[0]['ImageName'].'"></div>';
         echo '<p>'.$prevPhone[0]['Nome'].'</p>';
      
@@ -190,27 +194,30 @@ echo '<div id="myCarousel" class="carousel slide" data-ride="carousel">
         echo '<input type="hidden" name="next" value="'.$phone[0]['Nome'].'" />'; 
         echo '<input type="hidden" name="phone" value="'.$prev.'" />';
         echo '<input type="hidden" name="prev" value="'.$all[$newPrev]['Nome'].'"/>';
-        echo '<button style="color:red;">View</button>';
+        echo '<button class="btn" style="text-align:center;border: 1px solid red;"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;</button>';        
         echo'</form>';
-    
         echo '</div>';
      }
      if($next!=null){
         echo '<div class="indexWrapper" style="text-align:center;">';
-        echo '<p>Next</p>';
         echo '<div class="colorBox thumbnail"><img src="Images/'.$nextPhone[0]['ImageName'].'"></div>';
         echo '<p>'.$nextPhone[0]['Nome'].'</p>';
-         echo '<form action="deviceTemplate.html" method="get">';
+        if($newNext<4){
+        echo '<form action="deviceTemplate.html" method="get">';
         echo '<input type="hidden" name="prev" value="'.$phone[0]['Nome'].'" />'; 
         echo '<input type="hidden" name="phone" value="'.$next.'" />';
         echo '<input type="hidden" name="next" value="'.$all[$newNext]['Nome'].'" />';
-        echo '<button>View</button>';
+        echo '<button class="btn" style="text-align:center;border: 1px solid red;"><span class="glyphicon glyphicon-chevron-right"></span>&nbsp;</button>';
         echo'</form>';
+        }
+        else{
+        echo '<button class="btn" style="text-align:center;"><span class="glyphicon glyphicon-chevron-right"></span>&nbsp;</button>';
+        }
+
          echo '</div>';
      }
      echo '</div>';
      echo '</div>';
-
      echo '</div>';
      
  

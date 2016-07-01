@@ -5,6 +5,6 @@ $(document).ready(function(){
                 dataType : 'html',
                 success: function(response) {
                     $('.grid').html(response);
-                }
-            }); 
+            }
+    }); 
 });

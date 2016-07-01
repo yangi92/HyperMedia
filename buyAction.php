@@ -33,9 +33,7 @@ $conn->close();
      include("connection.php");
     /* Getting the device data */
 
-    echo'<div class="btnWrap">
-        <h3>Your shopping cart</h3>
-        </div>';
+  
     $sql ="SELECT *  FROM ShoppingCart WHERE Cookie='".$sid."'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -47,8 +45,27 @@ $conn->close();
         echo "0 results";  
     }    
     $conn->close();
-
+    $cont=0;
     for($i=0;$i<count($phone);++$i){
+        if($phone[$i]['Nome']==null){
+            ++$cont;
+        }
+    }
+    if((count($phone)-$cont)>0){
+          echo'<div class="btnWrap">
+        <h3>Your shopping cart:</h3>
+        </div>';
+    }else{
+          echo'<div class="btnWrap">
+        <h3>Your shopping cart is empty!</h3>
+        </div>';
+    }
+    
+    
+    $total=0;
+    echo '<div class="row">';
+    for($i=0;$i<count($phone);++$i){
+        
         $database=$phone[$i]['Db'];
         if($phone[$i]['Nome']!=null){
         include("connection.php");
@@ -64,7 +81,7 @@ $conn->close();
             echo "0 results";  
         }    
         $conn->close();
-        
+         
          echo '<div class="col-sm-3 device">';
                     
                         /* Piazzamento imagine */
@@ -84,9 +101,15 @@ $conn->close();
                         echo '<div class="inlineDisplay" style="text-align:center";>'; 
                         echo '<p>Price: <p class="price">' . $res[0]['Prezzo'] . '</p>€</p>';
                         echo '</div>';
-                        
-            
-                     echo '</div>';          
+                        $total=$total+(int)$res[0]['Prezzo'];
+         echo '</div>';          
         }
-    }
+    }   
+         echo '</div>';          
+
+    echo '<div style="width:100%;border:1px solid #bbb;">';
+     echo ' <div class="row btnWrap">
+              <h3><u>Total: '.$total.'€</u></h3>
+              </div>
+              </div>';
 ?>

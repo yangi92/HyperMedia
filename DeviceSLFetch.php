@@ -46,13 +46,11 @@
                          echo '<div class="mobile" style="display:none;">' . $sl[$i]['Mobile'] . '</div>'; 
                          echo '<div class="cat" style="display:none;">' . $sl[$i]['Category'] . '</div>'; 
                         
-                        
-                        /*View Button*/
-                        /*
-                        echo '<form action="deviceTemplate.html" method="get">';
-                        echo '<input type="hidden" name="phone" value="'.$sl[$i]['Nome'].'" />';
+                      
+                        echo '<form action="#" method="get">';
+                        echo '<input type="hidden" name="" value="" />';
                         echo '<button>View</button>';
-                         echo'</form>';*/
+                         echo'</form>';
                         echo '</div>';  
                     }
         echo '</div>';

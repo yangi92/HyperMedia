@@ -1,7 +1,7 @@
 <?php
                 
                  include("connection.php");
-                 $sql = "SELECT * FROM TvEnte   ";
+                 $sql = "SELECT * FROM Services";
                  $result = $conn->query($sql);
                  if ($result->num_rows > 0) {
                      $services= array();
@@ -18,13 +18,13 @@
          
 
               echo '<div class="row">';
-                    echo '<div class="col-sm-4">';
+              echo '<div class="col-sm-4">';
                         
                         /* nome + image*/
                     
-                        echo '<h2>' .$services[0]['Nome'] .'</h2>';
+                        echo '<h2>' .$services[2]['Nome'] .'</h2>';
                         echo '<div class="service">'; 
-                            $img = $services[0]['ImageName'];
+                            $img = $services[2]['ImageName'];
                             echo '<img src="Images/' . $img . '">';
                         	echo '</div>';
 						echo '</div>';
@@ -35,14 +35,14 @@
                    /*servizi */
                     echo '<div class="col-sm-8">';
                             echo '<h2> Details </h2>';
-                            echo '<p> ' .$services[0]['Descrizione'] . '</p>';
+                            echo '<p> ' .$services[2]['Descrizione'] . '</p>';
                             echo "<h2> Prices </h2>";  
                             
                             echo '<ul>';
-                            echo '<li align="left"> ' .$services[0]['PrezzoSoluzione1'] . '</li>';
-                            echo '<li align="left"> ' .$services[0]['PrezzoSoluzione2'] . '</li>';
-                            echo '<li align="left"> ' .$services[0]['PrezzoSoluzione3'] . '</li>';
-                            echo '<li align="left"> ' .$services[0]['PrezzoSoluzione4'] . '</li>';
+                            echo '<li align="left"> ' .$services[2]['PrezzoSoluzione1'] . '</li>';
+                            echo '<li align="left"> ' .$services[2]['PrezzoSoluzione2'] . '</li>';
+                            echo '<li align="left"> ' .$services[2]['PrezzoSoluzione3'] . '</li>';
+                           // echo '<li align="left"> ' .$services[2]['PrezzoSoluzione4'] . '</li>';
                             echo '</ul>';
                     
                     echo '<div class="btn-group">';
@@ -54,10 +54,10 @@
                         echo '</span>';
                         echo '</button>';
                         echo '<ul class="dropdown-menu">';
-                             echo '<li align="left"><a href="#"> ' .$services[0]['PrezzoSoluzione1'] . '</li>';
-                            echo '<li align="left"><a href="#"> ' .$services[0]['PrezzoSoluzione2'] . '</li>';
-                            echo '<li align="left"><a href="#"> ' .$services[0]['PrezzoSoluzione3'] . '</li>';
-                            echo '<li align="left"><a href="#"> ' .$services[0]['PrezzoSoluzione4'] . '</li>';
+                             echo '<li align="left"><a href="#"> ' .$services[2]['PrezzoSoluzione1'] . '</li>';
+                            echo '<li align="left"><a href="#"> ' .$services[2]['PrezzoSoluzione2'] . '</li>';
+                            echo '<li align="left"><a href="#"> ' .$services[2]['PrezzoSoluzione3'] . '</li>';
+                            echo '<li align="left"><a href="#"> ' .$services[2]['PrezzoSoluzione4'] . '</li>';
                         echo '</ul>';
                     echo '</div>';
                     
