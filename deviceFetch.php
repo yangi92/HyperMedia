@@ -159,11 +159,15 @@
         
             <form action="deviceforsmartlife.html" method="get">
             <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
+            <input type="hidden" name="next" value="'.$next.'" />
+            <input type="hidden" name="prev" value="'.$prev.'" />
             <button class="btn btn-primary highlights">Available Smartlife Service</button>
             </form>
          
-            <form action="#" method="get">
+            <form action="AvailableServices.html" method="get">
             <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
+            <input type="hidden" name="next" value="'.$next.'" />
+            <input type="hidden" name="prev" value="'.$prev.'" />
             <button class="btn btn-primary highlights">Available Assistance Service</button>
             </form>
         </div>

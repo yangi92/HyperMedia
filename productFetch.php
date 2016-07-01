@@ -60,9 +60,21 @@
    echo '<div class=col-sm-4 style="margin-top:2%;">';
     echo'<div class="btnWrap">   
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">FAQ </button>
-        <button type="button" class="btn btn-primary">Activation & Rules</button>
-        <button type="button" class="btn btn-primary">Compatible devices</button>
+        
+        <form action="FAQ.html" method="get">
+            <input type="hidden" name="product" value="'.$device[0]['Nome'].'" />
+            <button class="btn btn-primary highlights">F.A.Q.</button>
+            </form>
+            
+        <form action="Activation.html" method="get">
+            <input type="hidden" name="product" value="'.$device[0]['Nome'].'" />
+            <button class="btn btn-primary highlights">Activation&Rules</button>
+            </form>
+            
+        <form action="Compatible.html" method="get">
+            <input type="hidden" name="product" value="'.$device[0]['Nome'].'" />
+            <button class="btn btn-primary highlights">Compatible Devices</button>
+            </form>
         </div>
         </div>
         </div>';

@@ -32,25 +32,30 @@ $sql = "SELECT DISTINCT Category FROM `AssistanceService` WHERE UpperCat=\"LineS
                     /* titolo */
                      echo '<div class="titleAssistance">';echo '<p style="text-align:center">'.$cat[$i]['Category'].'</p>';
                         echo '</div>';
-                    /* unorderlist */
-                    echo '<div class="listAssistance">'; 
-                   //     echo '<ul style="list-style-type: none;">';
+                    
+                     echo '<div class="listAssistance">'; 
+               
                     for($j=0;$j<count($serv);++$j){
-                        if($serv[$j]['Category']==$cat[$i]['Category']){
-                        //    echo '<li><a href="#">'.$serv[$j]['Nome'].'</a></li>';
-                            
-                          
+                    
+                     if($serv[$j]['Category']==$cat[$i]['Category']){  
+                      if(($serv[$j]['Nome']=="ChangeContract")||($serv[$j]['Nome']=="AllAboutYourSimCard")||($serv[$j]['Nome']=="AbroadWithTim")){     
                      echo '<form action="ServiceTemplate.html" method="get">';
-                     echo '<input type="hidden" name="product" value="'.$serv[$j]['Nome'].'" />'; 
+                     echo '<input type="hidden" name="service" value="'.$serv[$j]['Nome'].'" />'; 
+                     echo '<button class="btnservice" style="text-align:center;color:red;">'.$serv[$j]['Nome'].'</button>';
+                     echo'</form>';}
+                        else{
+                     echo '<form action="#" method="get">';
+                     echo '<input type="hidden" name="service" value="" />'; 
                      echo '<button class="btnservice" style="text-align:center;">'.$serv[$j]['Nome'].'</button>';
-                     echo'</form>';
-                            
+                     echo'</form>'; 
+                        }
+                    
                             
             
                         }
                             
                     }
-                    //echo '</ul>';
+                  
                         echo '</div>';
                     echo'</div>';}
 
@@ -59,20 +64,21 @@ $sql = "SELECT DISTINCT Category FROM `AssistanceService` WHERE UpperCat=\"LineS
                     /* titolo */
                      echo '<div class="titleAssistance">';echo '<p style="text-align:center">'.$cat[$i]['Category'].'</p>';
                         echo '</div>';
-                    /* unorderlist */
+                    
+                    
+                  
                     echo '<div class="listAssistance">'; 
-                        //echo '<ul style="list-style-type: none;">';
+                  
                     for($j=0;$j<count($serv);++$j){
                         if($serv[$j]['Category']==$cat[$i]['Category']){
-                           // echo '<li><a href="#">'.$serv[$j]['Nome'].'</a></li>'; 
-                     echo '<form action="ServiceTemplate.html" method="get">';
-                     echo '<input type="hidden" name="product" value="'.$serv[$j]['Nome'].'" />'; 
+                    
+                     echo '<form action="#" method="get">';
+                     echo '<input type="hidden" name="service" value="" />'; 
                      echo '<button class="btnservice" style="text-align:center;">'.$serv[$j]['Nome'].'</button>';
-                     echo'</form>';
+                     echo'</form>'; 
                         }
                             
                     }
-                    //echo '</ul>';
                         echo '</div>';
                     echo'</div>';}
                 

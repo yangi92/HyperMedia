@@ -30,12 +30,16 @@
               $text = $high[$i]['Nome'];
              
             echo '<div class="row">
-            <div class="col-sm-3"></div><div class="col-sm-6">
-            <form action="#" method="get">
-            <input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />
-            <button class="btn btn-primary highlights">'.$text.'</button>
-            </form>
-            </div>
+            <div class="col-sm-3"></div><div class="col-sm-6">';
+            if($i<3){
+            echo'<form action="ServiceTemplate.html" method="get">
+                <input type="hidden" name="service" value="'.$high[$i]['Nome'].'" />
+                <button class="btn btn-primary highlights">'.$text.'</button>
+                </form>';
+            }else{
+            echo'<button class="btn btn-primary highlights"style="border:none;">'.$text.'</button>';
+            }
+            echo'</div>
             <div class="col-sm-3"></div>
             </div>';
                   
@@ -45,7 +49,7 @@
             }
 
      
-              
+        
               
 
     

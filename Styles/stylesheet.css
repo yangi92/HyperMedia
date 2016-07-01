@@ -662,3 +662,7 @@ color:gainsboro;
     background-color: gainsboro;
 }
 
+.actContent{
+    font-size: 15px;
+    border: solid 1px black;
+}

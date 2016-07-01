@@ -45,6 +45,7 @@
                         echo '<div id="'.$coll.'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="'.$head.'">';
                         echo '<p>' . $news[$i]['Content'] . '</p>';
                         echo '</div>';
+                        echo '</div>';
                         
                 }
                 echo  '</div>';

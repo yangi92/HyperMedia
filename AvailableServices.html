@@ -5,14 +5,14 @@
     <head>
     <meta name="viewport" content="initial-scale=1">
     <meta charset="utf-8">
-    <title>TIM-Assistance</title>
+    <title>TIM-Devices:Assistance</title>
     <link rel="icon" href="img/favicon.ico"/>     
   
      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
      <link rel="stylesheet" type="text/css" href="Styles/stylesheet.css">
-     <script src="Scripts/myscripts.js"></script> 
+     <script src="Scripts/myscripts.js"></script>
     
     </head>
     
@@ -35,9 +35,9 @@
     
                <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="underlineFromCenter"><a href="devices.html">DEVICES <span class="sr-only">(current)</span></a></li>
+                    <li class="active underlineFromCenter"><a href="devices.html">DEVICES <span class="sr-only">(current)</span></a></li>
                     <li class="underlineFromCenter"><a href="smartlife.html">SMARTLIFE</a></li>
-                         <li class="active underlineFromCenter"><a href="Assistance.html">ASSISTANCE</a></li>
+                    <li class="underlineFromCenter"><a href="Assistance.html">ASSISTANCE</a></li>
                                         <li class="underlineFromCenter"><a href="Highlights.html">HIGHLIGHTS</a></li>
                     <li class="underlineFromCenter"><a href="TheGroup_TimGroup.html">THE GROUP</a></li>
                     <li class="underlineFromCenter"><a href="whoweare.html">WHO WE ARE</a></li>
@@ -49,25 +49,22 @@
     </div>
      <nav class="navbar navbar-default sidebar" style="z-index:100;" role="navigation">
     <div class="container-fluid">
-    <div class="navbar-header">
+      <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>      
-      <p class="navbar-brand" style="font-size:0.9em;">Smartlife categories</p>
+    <p class="navbar-brand" style="font-size:0.9em;">Device Categories</p>
     </div>
     <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="tventertainment.html">Line and Service
-Management<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>        
-        <li ><a href="healtwellness.html">Cost and
-Payment Control<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-        <li ><a href="homefamily.html">Technical support
-and Configuartion<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-        <li ><a href="personalservices.html">Contents and
-Smartlifes<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+        <li class="active"><a href="Smartphones.html">Smartphone and devices<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>        
+        <li ><a href="Tablet.html">Tablet and computers<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+        <li ><a href="Modem.html">Modem and Networking<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+        <li ><a href="DeviceSL.html">Smartlife and Entertainment<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+        <li ><a href="DeviceOutlet.html">Outlet<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
       </ul>
     </div>
   </div>
@@ -75,9 +72,9 @@ Smartlifes<span style="font-size:16px;" class="pull-right hidden-xs showopacity"
         
  <div class="centralBox">
      
-        
      
      <script>
+         
          var getUrlParameter = function getUrlParameter(sParam) {
                  var sPageURL = decodeURIComponent(window.location.search.substring(1)),
                  sURLVariables = sPageURL.split('&'),sParameterName,i;
@@ -96,9 +93,11 @@ Smartlifes<span style="font-size:16px;" class="pull-right hidden-xs showopacity"
      $.ajax({
                 
                 type : "POST",
-                url : 'serviceTemplateFetch.php',
-                data : { product: getUrlParameter('product'), 
-                         
+                url : 'http://projectim.altervista.org/AvailableServices.php',
+                data : { phone: getUrlParameter('phone'),
+                         next: getUrlParameter('next'),
+                         prev:getUrlParameter('prev'),
+                          
                        },
                 dataType : 'html',
                 success: function(response) {
@@ -106,6 +105,9 @@ Smartlifes<span style="font-size:16px;" class="pull-right hidden-xs showopacity"
                 }
             }); 
      });
+           
+         
+            
      </script> 
     
   

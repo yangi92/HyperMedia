@@ -95,7 +95,8 @@
                 type : "POST",
                 url : 'http://projectim.altervista.org/deviceforsmartFetch.php',
                 data : { phone: getUrlParameter('phone'), 
-                          
+                         next: getUrlParameter('next'),
+                         prev:getUrlParameter('prev'),
                        },
                 dataType : 'html',
                 success: function(response) {

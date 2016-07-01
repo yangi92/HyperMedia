@@ -1,20 +1,11 @@
  
 <?php
-    if(isset($_POST['product'])) {
-        $name = $_POST['product'];
+    if(isset($_POST['service'])) {
+        $name = $_POST['service'];
     }
-    /* Getting the device data */
     echo '<script src="Scripts/dropDown.js"></script>';
     include("connection.php");
                 
-    $sql = "SELECT * FROM TvEntertainment";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        $all= array();
-        while($row = mysqli_fetch_array($result,MYSQL_ASSOC)){
-            $all[]=$row;
-        }
-    }
 
     $sql2 = "SELECT * FROM AssistanceService WHERE Nome ='".$name."'";
     $result = $conn->query($sql2);
@@ -30,7 +21,7 @@
 echo'<div class="container-fluid">';
     echo '<div class="row">';
         echo'<h3>'.$phone[0]['Nome'].'</h3>';
-        echo'<h2 class="titleDescription">' ."ACTIVATION". '</h2>';
+        echo'<h2 class="titleDescription">' ."DESCRIPTION". '</h2>';
         echo'<p class="assistanceDescription">'
             .$phone[0]['Description'].'</p>';
 echo '<div class="btnWrap">';
@@ -38,14 +29,10 @@ echo '<div class="btnWrap">';
 
 
 
-echo'<form action="#" method="get">';
-      echo  '<input type="hidden" name="phone" value="'.$phone[0]['Nome'].'" />';
+echo'<form action="AssistanceFor.html" method="get">';
+      echo  '<input type="hidden" name="service" value="'.$phone[0]['Nome'].'" />';
         echo'<button class="btn btn-primary">'."Assistance For".'</button>';
       echo'</form>';
-    
-    
-    
-//echo '<button type="button" class="btn btn-default" style="text-align: center";>'."Assistance For".'</button>';
 
 
     echo'</div>';

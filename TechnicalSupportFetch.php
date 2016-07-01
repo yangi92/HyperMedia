@@ -37,11 +37,10 @@ $sql = "SELECT DISTINCT Category FROM `AssistanceService` WHERE UpperCat=\"Techn
                         //echo '<ul style="list-style-type: none;">';
                     for($j=0;$j<count($serv);++$j){
                         if($serv[$j]['Category']==$cat[$i]['Category']){
-                            //echo '<li><a href="#">'.$serv[$j]['Nome'].'</a></li>'; 
-                            echo '<form action="ServiceTemplate.html" method="get">';
-                     echo '<input type="hidden" name="product" value="'.$serv[$j]['Nome'].'" />'; 
+                         echo '<form action="#" method="get">';
+                     echo '<input type="hidden" name="service" value="" />'; 
                      echo '<button class="btnservice" style="text-align:center;">'.$serv[$j]['Nome'].'</button>';
-                     echo'</form>';
+                     echo'</form>'; 
                             
                         }
                             
@@ -60,12 +59,10 @@ $sql = "SELECT DISTINCT Category FROM `AssistanceService` WHERE UpperCat=\"Techn
                         //echo '<ul style="list-style-type: none;">';
                     for($j=0;$j<count($serv);++$j){
                         if($serv[$j]['Category']==$cat[$i]['Category']){
-                            //echo '<li><a href="#">'.$serv[$j]['Nome'].'</a></li>';
-                            
-                            echo '<form action="ServiceTemplate.html" method="get">';
-                     echo '<input type="hidden" name="product" value="'.$serv[$j]['Nome'].'" />'; 
+                     echo '<form action="#" method="get">';
+                     echo '<input type="hidden" name="service" value="" />'; 
                      echo '<button class="btnservice" style="text-align:center;">'.$serv[$j]['Nome'].'</button>';
-                     echo'</form>';
+                     echo'</form>'; 
                         }
                             
                     }
